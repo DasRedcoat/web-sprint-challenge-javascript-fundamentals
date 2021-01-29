@@ -1,6 +1,6 @@
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
-Study the code below and explain in your own words why nested function can access the variable internal. */
+Study the code below and explain in your own words why the nested function can access the variable internal. */
 
 const external = "I'm outside the function";
 
@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// The callback 'external' is defined before, and outside, the function, so it is is executed in HIGHER ORDER before the function runs in the execution stack. This allows the variable 'external' to be used outside of the function, by other functions, after it has been computed within it's own scope.
 
 
 
@@ -28,11 +28,14 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(4) {
+  let num = 0;
+  for (i = 0, i < 5, i++)
+    if (i > 0 && i < 5) {
+      return (i + 1)
+    }
   }
- 
+return (num)
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -56,8 +59,10 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+
+function animalNames.forEach(function(item) {
+    for (i = 0, i < zooAnimals.length; i++)
+    return item 
   }
   
 
