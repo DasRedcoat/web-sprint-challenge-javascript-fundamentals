@@ -201,13 +201,18 @@ function CuboidMaker(attributes) {
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
+ // What is the NEW KEYWORD??? is it "cuboidTwo"?? Is the next Topic giving us the answer to that or are we making up our own????
 
-  // IS THIS BEING TESTED?? I Can't read if it's right or wrong. 
+  // IS THIS BEING TESTED?? I Can't figure out if it's right or wrong!! this is very frustrating.
 
 
-function cuboid() {
-  
-}
+// function Cuboid(cuboidTwo) {
+//   constructor(cuboidTwo) {
+//     this.length = length;
+//     this.width = width;
+//     this.height = height;
+//   }
+// }
 
 
 
@@ -221,7 +226,21 @@ function cuboid() {
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄.
 
-class CuboidMakerTwo{
+
+class CuboidMakerTwo {
+  constructor(cuboidTwo) {
+    this.length = cuboidTwo.length;
+    this.width = cuboidTwo.width;
+    this.height = cuboidTwo.height;
+  }
+
+  volume() {
+    return (this.length * this.width * this.height)
+  }
+
+  surfaceArea() {
+    return (2 * (this.length * this.width + this.length * this.height + this.width * this.height))
+  }
 }
 
 
