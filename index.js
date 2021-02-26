@@ -28,11 +28,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
+
+// is summation the adding up of each digit up to a number or is it the accumulation of something? 
+
 function summation(num) {
   for ( let i = 0; i <= num; i++) {
-    return i + i
+    return (i++)
     }
-    return i;
   }
 
 
@@ -58,17 +60,46 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
+// I keep recieving an empty red [] as a result.
+// 
 
-
- function animalNames(array) {
+function animalNames(array) {
   let displayNames = [];
-    array.forEach (function(item) {
-      for ( let i = 0; i < array.length; i++) {
-        displayNames.push (`name: ${array.i[0]}, scientific: ${displayNames.i[2]}`)
-        }
-    })
-  }
- 
+  array.forEach (function(item) {
+    for ( let i = 0; i < array.length; i++) {
+      // if (zooAnimals[item] === "animal_name:" && zooAnimals[item] === "scientific_name:")
+      return `name: ${array.item.["animal_name:"]}, scientific: ${array.item["scientific name:"]}`
+      }
+      return displayNames
+    }
+
+
+    
+// let displayNames = [];
+// function animalNames(array) {
+//   let displayNames = [];
+//   array.forEach (function(item) {
+//     for ( let i = 0; i < array.length; i++) {
+//       // if (zooAnimals[item] === "animal_name:" && zooAnimals[item] === "scientific_name:")
+//       return `name: ${array.item.["animal_name:"]}, scientific: ${array.item["scientific name:"]}`
+//       }
+//       return displayNames
+//     }
+
+
+
+//  function animalNames(zooAnimals) {
+//     let displayNames = [];
+//     zooAnimals.forEach (function(item) 
+//       for ( let i = 0; i < zooAnimals.length; i++) {
+//         // if (zooAnimals[item] === "animal_name:" && zooAnimals[item] === "scientific_name:")
+//         displayNames.push (`name: ${zooAnimals.i["animal_name:"]}, scientific: ${zooAnimals.i["scientific name:"]}`)
+//         }
+//         return displayNames;
+//       }
+//     }
+
+
   // let namesOnly = [];
   // function animalNames(array) {
   //   for ( let i = 0; i < array.length; i++) {
@@ -84,11 +115,16 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames() {
+
+function lowerCaseNames(array) {
+    array.filter(function(item) {
+    return item.toLowerCase();
+  })
+}
     // let lowerCaseNames = animalNames(array).map (function(item) {
       
     // })
-  }
+}
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -96,8 +132,8 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array) {
+
   }
   
 
