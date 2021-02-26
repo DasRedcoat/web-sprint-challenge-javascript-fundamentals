@@ -32,8 +32,8 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 // is summation the adding up of each digit up to a number or is it the accumulation of something? 
 
 function summation(num) {
-  for ( let i = 0; i <= num; i++) {
-    return (i++)
+  for ( let i = 0; i <= num; i+1) {
+    return (num + i)
     }
   }
 
@@ -60,31 +60,23 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
+
+
 // I keep recieving an empty red [] as a result.
-// 
-
-function animalNames(array) {
-  let displayNames = [];
-  array.forEach (function(item) {
-    for ( let i = 0; i < array.length; i++) {
-      // if (zooAnimals[item] === "animal_name:" && zooAnimals[item] === "scientific_name:")
-      return `name: ${array.item.["animal_name:"]}, scientific: ${array.item["scientific name:"]}`
-      }
-      return displayNames
-    }
+// I have no effin* clue what is going on here... I'm getting syntax errors, and all kinds of stuff from the code grader and I have no idea where the issue is. 
 
 
-    
-// let displayNames = [];
-// function animalNames(array) {
+
+function animalNames(array, item) {
+}
 //   let displayNames = [];
 //   array.forEach (function(item) {
 //     for ( let i = 0; i < array.length; i++) {
 //       // if (zooAnimals[item] === "animal_name:" && zooAnimals[item] === "scientific_name:")
 //       return `name: ${array.item.["animal_name:"]}, scientific: ${array.item["scientific name:"]}`
 //       }
-//       return displayNames
 //     }
+//   },
 
 
 
@@ -116,15 +108,12 @@ function animalNames(array) {
   */
 
 
-function lowerCaseNames(array) {
-    array.filter(function(item) {
-    return item.toLowerCase();
-  })
-}
-    // let lowerCaseNames = animalNames(array).map (function(item) {
-      
-    // })
-}
+  function lowerCaseNames(array, CB) {
+    const lowerCaseNames = array.map(function(item) {
+      return array[item].toLowerCase
+    })
+    return lowerCaseNames;
+  }
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -132,8 +121,14 @@ function lowerCaseNames(array) {
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(array) {
-
+  // pop >= 5
+  let lowPopulationAnimals = [];
+  function lowPopulationAnimals(array, item) {
+    for (let i = 0; i > array.length; i++) {
+      if (item.population >= 5)
+        lowPopulationAnimals.push(array.animal_name[0])
+    }
+    return lowPopulationAnimals;
   }
   
 
@@ -142,6 +137,8 @@ function lowerCaseNames(array) {
   Using USApop find the total population from the zoos array using the .reduce() method. 
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
+
+  //accumulator  task, don't forget to end it with 0
 
   function USApop(/*Your Code Here*/){
     /*Your Code Here*/
