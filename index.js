@@ -67,7 +67,9 @@ const zooAnimals = [
 
 
 
-function animalNames(array, item) {
+function animalNames(array) {
+  let displayNames = [];
+  displayNames.push(array)
 }
 //   let displayNames = [];
 //   array.forEach (function(item) {
@@ -122,15 +124,23 @@ function animalNames(array, item) {
   */
 
   // pop >= 5
-  let lowPopulationAnimals = [];
-  function lowPopulationAnimals(array, item) {
-    for (let i = 0; i > array.length; i++) {
-      if (item.population >= 5)
-        lowPopulationAnimals.push(array.animal_name[0])
-    }
-    return lowPopulationAnimals;
-  }
   
+
+  function lowPopulationAnimals(array) {
+    const lowPopulationAnimals = array.filter (function(item) {
+      lowPopulationAnimals.push(array.population >=5)  
+    })
+    return lowPopulationAnimals
+    }
+
+  // function lowPopulationAnimals(array, item) {
+  //   let lowPopulationAnimals = [];
+  //   for (let i = 0; i > array.length; i++) {
+  //     if (item.population >= 5)
+  //       lowPopulationAnimals.push(array.animal_name[0])
+  //   }
+  // }
+
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -138,7 +148,9 @@ function animalNames(array, item) {
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  //accumulator  task, don't forget to end it with 0
+  //accumulator  task, don't forget to end it with 0 
+  // ((acc, item) => {
+  // return acc + item [`population`]
 
   function USApop(/*Your Code Here*/){
     /*Your Code Here*/
