@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// the nestedFunction is still within the scope of myFunction. JS's lexical enviornment will allow functions to search within the scope they are, and outward, but never inward/further down the line of child functions. myFunction can reach outside one level to find 'external' in the global window, making it available to be called by any function searching outward of it's function. The nestedFunction can reach outside it's scope, into the scope of myFunction to find where internal is declared and return it's string. 
 
 
 
@@ -28,11 +28,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  for ( let i = 0; i < num; i++) {
+    if (i < num) {
+    return (i += i)
+    }
   }
- 
+}
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -56,8 +58,12 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array) {
+    let namesOnly = [];
+    for ( let i =0; i < array.length; i++) {
+      namesOnly.push (`name: ${array.i["animal_name:"]}, scientific: ${array.i["scientific_name:"]}`)
+    }
+    return (namesOnly)
   }
   
 
