@@ -29,12 +29,12 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(num) {
-  for ( let i = 0; i < num; i++) {
-    if (i < num) {
-    return (i += i)
+  for ( let i = 0; i <= num; i++) {
+    return i + i
     }
+    return i;
   }
-}
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -58,13 +58,24 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(array) {
-    let namesOnly = [];
-    for ( let i =0; i < array.length; i++) {
-      namesOnly.push (`name: ${array.i["animal_name:"]}, scientific: ${array.i["scientific_name:"]}`)
-    }
-    return (namesOnly)
+
+
+ function animalNames(array) {
+  let displayNames = [];
+    array.forEach (function(item) {
+      for ( let i = 0; i < array.length; i++) {
+        displayNames.push (`name: ${array.i[0]}, scientific: ${displayNames.i[2]}`)
+        }
+    })
   }
+ 
+  // let namesOnly = [];
+  // function animalNames(array) {
+  //   for ( let i = 0; i < array.length; i++) {
+  //     return array.forEach[i].push (`name: ${array.i["animal_name:"]}, scientific: ${array.i["scientific_name:"]}`)
+  //   }
+  // }
+  // console.log(namesOnly);
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -73,8 +84,10 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames() {
+    // let lowerCaseNames = animalNames(array).map (function(item) {
+      
+    // })
   }
   
   
@@ -107,16 +120,16 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, callback) {
+    return callback(a, b)
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(num1, num2) {
+    return (num1 + num2)
   }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
