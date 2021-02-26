@@ -134,14 +134,14 @@ function add(num1, num2) {
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(num1, num2) {
+   return (num1 * num2)
   }
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(firstName, lastName){
+   return `Hello ${firstName} ${lastName}, nice to meet you!`
   }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
@@ -162,16 +162,27 @@ function greeting(/*Your Code Here */){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+
+function CuboidMaker(attributes) {
+  this.length = attributes.length;
+  this.width = attributes.width;
+  this.height = attributes.height;
 }
+
+// function CuboidMaker(length, width, height) {
+//   this.length = length;
+//   this.width = width;
+//   this.height = height;
+// }
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-
+    CuboidMaker.prototype.volume = function(CuboidMaker) {
+      return (this.length * this.width * this.height)
+  }
 
 
 
@@ -180,7 +191,9 @@ function CuboidMaker(/*Your Code Here */){
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
 
-
+  CuboidMaker.prototype.surfaceArea = function(CuboidMaker) {
+    return (2 * (this.length * this.width + this.length * this.height + this.width * this.height))
+  }
 
 
 
@@ -188,6 +201,13 @@ function CuboidMaker(/*Your Code Here */){
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
+
+  // IS THIS BEING TESTED?? I Can't read if it's right or wrong. 
+
+
+function cuboid() {
+  
+}
 
 
 
@@ -199,9 +219,9 @@ function CuboidMaker(/*Your Code Here */){
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
-//🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo{
+//🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄.
 
+class CuboidMakerTwo{
 }
 
 
