@@ -67,10 +67,13 @@ const zooAnimals = [
 
 
 
-function animalNames(array) {
-  let displayNames = [];
-  displayNames.push(array)
-}
+// function animalNames(array) {
+//   let displayNames = [];
+//   displayNames.push(array)
+// }
+
+
+
 //   let displayNames = [];
 //   array.forEach (function(item) {
 //     for ( let i = 0; i < array.length; i++) {
@@ -82,16 +85,14 @@ function animalNames(array) {
 
 
 
-//  function animalNames(zooAnimals) {
-//     let displayNames = [];
-//     zooAnimals.forEach (function(item) 
-//       for ( let i = 0; i < zooAnimals.length; i++) {
-//         // if (zooAnimals[item] === "animal_name:" && zooAnimals[item] === "scientific_name:")
-//         displayNames.push (`name: ${zooAnimals.i["animal_name:"]}, scientific: ${zooAnimals.i["scientific name:"]}`)
-//         }
-//         return displayNames;
-//       }
-//     }
+ function animalNames(zooAnimals) {
+    let displayNames = [];
+    zooAnimals.forEach (function(item) {
+      for ( let i = 0; i < zooAnimals.length; i++) {
+        // if (zooAnimals[item] === "animal_name:" && zooAnimals[item] === "scientific_name:")
+        displayNames.push (`name: ${zooAnimals.i["animal_name:"]}, scientific: ${zooAnimals.i["scientific name:"]}`)
+        }
+      }
 
 
   // let namesOnly = [];
